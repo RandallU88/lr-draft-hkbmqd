@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Book | Liberty Retreats</title>
+<meta name="description" content="Booking opens soon. Join the Liberty Retreats waitlist.">
+<!-- PRIVATE DRAFT: keep out of search engines until Randall okays launch -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1E2D4A">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="image/svg+xml" href="assets/img/badge.svg">
+<link rel="apple-touch-icon" href="assets/img/badge.svg">
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/config.js"></script>
+</head>
+<body data-page="book">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap head-row">
+    <a class="brand" href="index.html" aria-label="Liberty Retreats home">
+      <img src="assets/img/badge.svg" alt="" width="44" height="44">
+      <span><b>Liberty Retreats</b><small>Book Quiet Ohio Dirt.</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" aria-label="Main">
+      <a href="index.html">Home</a><a href="book.html" aria-current="page">Book</a><a href="gear.html">Gear Up</a><a href="hosts.html" class="nav-land">Landowners</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="page-head"><div class="wrap">
+  <p class="eyebrow" style="color:#E9B8B8">Book</p>
+  <h1>Booking opens soon.</h1>
+  <p>No dates are open yet. Get on the waitlist and Liberty will reach out when pads open.</p>
+</div></section>
+
+<section class="section tight price-only" hidden>
+  <div class="wrap grid two">
+    <div class="card">
+      <p class="eyebrow">Rates</p>
+      <h2>Plain pricing</h2>
+      <ul class="price-board">
+        <li><span>Primitive pad, per night</span><b data-price="night"></b></li>
+        <li><span>Add-on: smokeless fire ring</span><b>+<span data-price="fireRing"></span></b></li>
+        <li><span>Add-on: lantern</span><b>+<span data-price="lantern"></span></b></li>
+      </ul>
+      <p class="fine" style="margin-top:12px">Add-ons are optional. Rates are shown for planning and are confirmed when Liberty contacts you.</p>
+    </div>
+    <div class="card">
+      <p class="eyebrow">What you get</p>
+      <h2>A quiet pad</h2>
+      <ul class="checks">
+        <li>American and Liberty flags on an extendable pole</li>
+        <li>Fire ring, fire extinguisher, emergency radio</li>
+        <li>You bring the tent</li>
+      </ul>
+      <p class="muted">No electric, water, restrooms, or cabins.</p>
+    </div>
+  </div>
+</section>
+<section class="section tight price-off" hidden><div class="wrap"><p class="muted">Rates will be posted when booking opens.</p></div></section>
+
+<section class="section tight">
+  <div class="wrap">
+    <!-- ======================================================
+         CALENDLY EMBED SLOT. Calendly is the locked booking tool.
+         Set CALENDLY_URL in assets/js/config.js. While it is
+         empty, this box shows "Booking opens soon".
+         ====================================================== -->
+    <div class="cal-slot" id="calendly-slot" aria-live="polite">
+      <h3>Booking opens soon.</h3>
+      <p class="muted" style="margin:0">Online booking will appear here when it opens. Until then, use the waitlist below.</p>
+    </div>
+  </div>
+</section>
+
+<section class="section" id="waitlist">
+  <div class="wrap">
+    <p class="eyebrow">Waitlist and questions</p>
+    <h2>Get on the list.</h2>
+    <p class="lede">Tell us who is coming and when you would like to go. We will reach out when pads open. This does not hold a date.</p>
+    <form class="form" data-lr-form="waitlist" data-confirm="waitlist-done" action="#" method="post" style="margin-top:18px">
+      <div class="field"><label for="w-name">Name <span class="req">*</span></label><input id="w-name" name="name" type="text" autocomplete="name" required maxlength="100"></div>
+      <div class="field"><label for="w-email">Email <span class="req">*</span></label><input id="w-email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="150"></div>
+      <div class="field"><label for="w-phone">Phone <span class="muted">(optional)</span></label><input id="w-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" pattern="[0-9 .+\(\)\-]{7,20}" data-pattern-msg="Use digits, spaces, or dashes." maxlength="20"></div>
+      <div class="field"><label for="w-party">Party size <span class="req">*</span></label>
+        <select id="w-party" name="party_size" required><option value="">Choose</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7 or more</option></select>
+        <p class="hint">Occupancy limits are still being set.</p></div>
+      <div class="field"><label for="w-month">Preferred month <span class="req">*</span></label>
+        <select id="w-month" name="preferred_month" required><option value="">Choose</option><option>January</option><option>February</option><option>March</option><option>April</option><option>May</option><option>June</option><option>July</option><option>August</option><option>September</option><option>October</option><option>November</option><option>December</option><option>Flexible</option></select></div>
+      <div class="field full"><label for="w-notes">Notes <span class="muted">(optional)</span></label><textarea id="w-notes" name="notes" maxlength="1500" placeholder="Questions, how many nights, anything we should know."></textarea></div>
+      <div class="field full"><label class="check-row"><input type="checkbox" name="rules_ok" required> <span>I read the <a href="index.html#rules">guest rules</a>. Quiet hours, fire in the ring, pack it out.</span></label></div>
+      <div class="full"><button class="btn brick" type="submit" style="width:100%">Join the waitlist</button></div>
+    </form>
+    <div class="confirm" id="waitlist-done" hidden>
+      <h3>You are on the list.</h3>
+      <p data-confirm-msg>Thanks. Liberty will reach out when pads open. Nothing is booked yet.</p>
+      <p class="tbd" style="color:#D7CBB8;border-color:#D7CBB8">Draft: no form handler yet, nothing was sent</p>
+    </div>
+  </div>
+</section>
+
+<section class="section tight alt">
+  <div class="wrap">
+    <h3>Fine print</h3>
+    <ul class="fine">
+      <li><strong>No booking is confirmed until Liberty contacts you directly.</strong> Joining the waitlist does not hold a date or a pad.</li>
+      <li>Availability depends on each site being ready and on local rules where the land sits. Some sites may open later than others, or not at all.</li>
+      <li>The exact location of a pad is shared only after a booking is confirmed.</li>
+      <li>Guest rules apply to every stay. Breaking the quiet or fire rules ends the stay.</li>
+      <li>Pets, occupancy, check-in and check-out times, season, and cancellation terms are still being set.</li>
+    </ul>
+  </div>
+</section>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <img src="assets/img/badge.svg" alt="" width="58" height="58">
+          <div><b>LIBERTY RETREATS</b>Book Quiet Ohio Dirt.</div>
+        </div>
+        <p style="margin-top:14px">Primitive pads on private Ohio land. You bring the tent. The land stays land.</p>
+      </div>
+      <div>
+        <ul>
+          <li><a href="book.html">Book</a></li>
+          <li><a href="gear.html">Gear Up</a></li>
+          <li><a href="index.html#rules">Guest rules</a></li>
+          <li><a href="hosts.html">Landowners</a></li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li>X: <a data-x-link href="https://x.com/libertyretreats" target="_blank" rel="noopener">@libertyretreats</a></li>
+          <li>Email: <span data-contact-email>Email coming soon</span> <span class="tbd">Placeholder</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="foot-legal">&copy; <span data-year>2026</span> Liberty Retreats. Private draft. Not published.</p>
+  </div>
+</footer>
+<script src="assets/js/site.js"></script>
+</body>
+</html>
