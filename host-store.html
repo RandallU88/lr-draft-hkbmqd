@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Host Store | Liberty Retreats</title>
+<meta name="description" content="Private host starter kit and signs for Liberty Retreats landowners.">
+<!-- PRIVATE DRAFT: keep out of search engines until Randall okays launch -->
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1E2D4A">
+<meta name="format-detection" content="telephone=no">
+<link rel="icon" type="image/svg+xml" href="assets/img/badge.svg">
+<link rel="apple-touch-icon" href="assets/img/badge.svg">
+<link rel="stylesheet" href="assets/css/site.css">
+<script src="assets/js/config.js"></script>
+</head>
+<body data-page="host-store">
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-head">
+  <div class="wrap head-row">
+    <a class="brand" href="index.html" aria-label="Liberty Retreats home">
+      <img src="assets/img/badge.svg" alt="" width="44" height="44">
+      <span><b>Liberty Retreats</b><small>Book Quiet Ohio Dirt.</small></span>
+    </a>
+    <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
+    <nav id="site-nav" aria-label="Main">
+      <a href="index.html">Home</a><a href="book.html">Book</a><a href="gear.html">Gear Up</a><a href="hosts.html" aria-current="page" class="nav-land">Landowners</a><a href="host-gear.html" class="host-only-nav" hidden>Host Gear</a><a href="host-store.html" class="host-only-nav" aria-current="page" hidden>Host Store</a>
+    </nav>
+  </div>
+</header>
+
+<main id="main">
+<section class="section" id="host-gate">
+  <div class="wrap gate">
+    <p class="eyebrow">Camp Hosts / Landowners only</p>
+    <h1 style="font-size:2rem">Host Store</h1>
+    <p>These pages are for Ohio landowners Liberty is talking with. Enter the landowner password Randall gave you.</p>
+    <form class="form" action="#" method="post" autocomplete="off">
+      <div class="field"><label for="host-pass">Landowner password</label><input id="host-pass" type="password" autocomplete="current-password" autocapitalize="off" autocorrect="off" spellcheck="false" required></div>
+      <p class="field-error" id="gate-msg" role="alert"></p>
+      <button class="btn brick" type="submit">Enter</button>
+    </form>
+    <p class="gate-note" style="margin-top:14px"><strong>Draft demo password: password</strong><br>Draft gate only. This is not real security. Real landowner access is TBD.</p>
+    <p style="margin-top:10px"><a href="index.html">Back to home</a></p>
+  </div>
+</section>
+<div data-gated hidden>
+<div class="host-bar"><div class="wrap"><span>Camp Hosts / Landowners area. Private draft.</span><span><a href="hosts.html" style="color:#F3ECE1">Landowner info</a> &nbsp;|&nbsp; <a href="host-gear.html" style="color:#F3ECE1">Host Gear</a> &nbsp;|&nbsp; <a href="host-store.html" style="color:#F3ECE1">Host Store</a> &nbsp; <button type="button" id="host-lock">Lock</button></span></div></div>
+<section class="page-head"><div class="wrap">
+  <p class="eyebrow" style="color:#E9B8B8">Host Store</p>
+  <h1>Buy site gear from Liberty.</h1>
+  <p><span class="test-flag">TEST - no charge</span> Camp Hosts order fire rings, safety gear, firewood, flag poles, signs and path lights here. Prices are not set yet ($TBD). Art is placeholder.</p>
+</div></section>
+<section class="section">
+  <div class="wrap">
+    <div class="cart" style="margin-top:0"><strong>Cart: <span id="cart-count">0</span> items</strong></div>
+    <div class="products" id="store-grid" style="margin-top:18px"></div>
+    <div class="cart" id="cart">
+      <h3>Your cart</h3>
+      <ul id="cart-list"></ul>
+      <p class="fine">Total: $TBD. Prices are placeholders until Liberty sets them.</p>
+      <button class="btn brick" type="button" id="cart-go" disabled style="width:100%">Go to test checkout</button>
+    </div>
+    <div id="store-checkout" hidden style="margin-top:20px">
+      <p class="eyebrow"><span class="test-flag">TEST - no charge</span></p>
+      <h2>Test checkout</h2>
+      <form class="form" id="store-form" action="#" novalidate>
+        <div class="field"><label for="so-name">Camp Host name <span class="req">*</span></label><input id="so-name" name="name" required maxlength="100" autocomplete="name"></div>
+        <div class="field"><label for="so-email">Email <span class="req">*</span></label><input id="so-email" name="email" type="email" required maxlength="150" autocomplete="email"></div>
+        <div class="field"><label for="so-phone">Phone <span class="req">*</span></label><input id="so-phone" name="phone" type="tel" required maxlength="20" autocomplete="tel"></div>
+        <div class="field"><label for="so-addr">Ship to (site address) <span class="req">*</span></label><input id="so-addr" name="addr" required maxlength="200" autocomplete="street-address"></div>
+        <p class="full fine"><strong>TEST - no charge.</strong> No payment step. Nothing is sent or shipped.</p>
+        <div class="full"><button class="btn brick" type="submit" style="width:100%">Place test order</button></div>
+      </form>
+    </div>
+    <div class="confirm" id="store-done" hidden style="margin-top:20px">
+      <p class="eyebrow" style="color:#E9B8B8">TEST ORDER. NOT REAL. NO CHARGE.</p>
+      <h2>Order placed. (Test)</h2>
+      <h3 id="so-num"></h3>
+      <ul class="price-board" id="so-list"></ul>
+    </div>
+  </div>
+</section>
+</div>
+</main>
+<footer class="site-foot">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <div class="foot-brand">
+          <img src="assets/img/badge.svg" alt="" width="58" height="58">
+          <div><b>LIBERTY RETREATS</b>Book Quiet Ohio Dirt.</div>
+        </div>
+        <p style="margin-top:14px">Primitive pads on private Ohio land. You bring the tent. The land stays land.</p>
+      </div>
+      <div>
+        <ul>
+          <li><a href="book.html">Book</a></li>
+          <li><a href="gear.html">Gear Up</a></li>
+          <li><a href="index.html#rules">Camp Host rules</a></li>
+          <li><a href="hosts.html">Landowners</a></li>
+        </ul>
+      </div>
+      <div>
+        <ul>
+          <li>X: <a data-x-link href="https://x.com/libertyretreats" target="_blank" rel="noopener">@libertyretreats</a></li>
+          <li>Email: <span data-contact-email>Email coming soon</span> <span class="tbd">Placeholder</span></li>
+        </ul>
+      </div>
+    </div>
+    <p class="foot-legal">&copy; <span data-year>2026</span> Liberty Retreats. Private draft. Not published.</p>
+  </div>
+</footer>
+<script src="assets/js/site.js"></script>
+<script src="assets/js/host-store.js"></script>
+</body>
+</html>
