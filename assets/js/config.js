@@ -36,7 +36,7 @@ window.LIBERTY = {
      Anyone who views the page source can read the password
      and the gated copy. Real gating is TBD (host login,
      server-side password, or a private page on the host). */
-  HOST_PASSWORD: "libertyhost",
+  HOST_PASSWORD: "password",
 
   /* Shows the thin "private draft" strip at the top. */
   SHOW_DRAFT_BANNER: true

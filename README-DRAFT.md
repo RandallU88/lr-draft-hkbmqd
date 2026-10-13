@@ -12,7 +12,7 @@ Not published. Do not upload until Randall signs off. Every page has `noindex`.
 - CALENDLY_URL: empty. Paste the Calendly link when it exists; the Book page embeds it automatically.
 - WAITLIST_FORM_ENDPOINT / HOST_FORM_ENDPOINT: empty. Add Formspree, Netlify, or GoDaddy form endpoint. Look for "FORM HANDLER GOES HERE" in assets/js/site.js.
 - CONTACT_EMAIL: placeholder (email-tbd@example.com).
-- HOST_PASSWORD: "libertyhost". NOT REAL SECURITY. Gated copy is in the page source. Replace with real gating before launch.
+- HOST_PASSWORD: "password". NOT REAL SECURITY. Gated copy is in the page source. Replace with real gating before launch.
 - SHOW_DRAFT_BANNER: the red "Private draft" strip.
 
 ## Notes
