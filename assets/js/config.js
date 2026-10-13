@@ -8,12 +8,11 @@ window.LIBERTY = {
      Merch, kit, and host items never show prices. */
   SHOW_PRICES: true,
   PRICES: {
-    night: 80,      /* per pad, per night */
-    fireRing: 20,   /* smokeless fire ring add-on */
-    lantern: 15     /* lantern add-on */
+    night: 80       /* flat, per SITE per night. Not per person. */
   },
-  /* Pad standard: American and Liberty flags on an extendable pole,
-     fire ring, fire extinguisher, emergency radio. Group size TBD. */
+  /* Included in the base price at every site: fire ring, flag pole,
+     first aid kit, fire blanket. Group size is set by each Camp Host.
+     Camp Hosts may offer their own optional extras. */
 
   /* GEAR UP (camper store). Amazon affiliate for now.
      Paste Randall's Amazon Associates tag here, e.g. "liberty-20".
