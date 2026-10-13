@@ -116,7 +116,7 @@ li{margin:.25em 0}
 /* Rules */
 .rules{counter-reset:r;list-style:none;padding:0;display:grid;gap:12px}
 @media (min-width:700px){.rules{grid-template-columns:1fr 1fr}}
-.rules li{counter-increment:r;position:relative;padding:14px 14px 14px 58px;background:rgba(243,236,225,.06);border:1px solid rgba(243,236,225,.2);border-radius:var(--r);margin:0}
+.rules li{color:inherit;counter-increment:r;position:relative;padding:14px 14px 14px 58px;background:rgba(243,236,225,.06);border:1px solid rgba(243,236,225,.2);border-radius:var(--r);margin:0}
 .rules li::before{content:counter(r);position:absolute;left:14px;top:12px;width:32px;height:32px;border-radius:50%;background:var(--brick);color:var(--parch);font:700 1rem/32px var(--slab);text-align:center}
 .rules strong{font-family:var(--slab);font-size:1.08rem}
 .callout{border-left:6px solid var(--brick);background:#FBF7F0;padding:16px 18px;border-radius:0 var(--r) var(--r) 0;margin:20px 0}

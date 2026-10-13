@@ -4,7 +4,7 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <title>Book | Liberty Retreats</title>
-<meta name="description" content="Sample booking for Liberty Retreats. Test only.">
+<meta name="description" content="Booking opens soon. Join the Liberty Retreats waitlist.">
 <!-- PRIVATE DRAFT: keep out of search engines until Randall okays launch -->
 <meta name="robots" content="noindex, nofollow">
 <meta name="theme-color" content="#1E2D4A">
@@ -32,30 +32,31 @@
 <main id="main">
 <section class="page-head"><div class="wrap">
   <p class="eyebrow" style="color:#E9B8B8">Book</p>
-  <h1>Pick a site. Pick your dates.</h1>
-  <p><span class="test-flag">TEST - no charge</span> These 4 sites are fake samples so you can try the booking flow. Nothing is booked, nothing is charged, and nothing is sent.</p>
+  <h1>Booking opens soon.</h1>
+  <p>No dates are open yet. Get on the waitlist and Liberty will reach out when pads open.</p>
 </div></section>
 
 <section class="section tight price-only" hidden>
   <div class="wrap grid two">
     <div class="card">
       <p class="eyebrow">Rates</p>
-      <h2>One flat price</h2>
+      <h2>Plain pricing</h2>
       <ul class="price-board">
-        <li><span>Per site, per night</span><b data-price="night"></b></li>
+        <li><span>Primitive pad, per night</span><b data-price="night"></b></li>
+        <li><span>Add-on: smokeless fire ring</span><b>+<span data-price="fireRing"></span></b></li>
+        <li><span>Add-on: lantern</span><b>+<span data-price="lantern"></span></b></li>
       </ul>
-      <p class="fine" style="margin-top:12px">The price is per site, not per person. Group size is set by each Camp Host.</p>
+      <p class="fine" style="margin-top:12px">Add-ons are optional. Rates are shown for planning and are confirmed when Liberty contacts you.</p>
     </div>
     <div class="card">
-      <p class="eyebrow">Included at every site</p>
-      <h2>In the base price</h2>
+      <p class="eyebrow">What you get</p>
+      <h2>A quiet pad</h2>
       <ul class="checks">
-        <li>Fire ring</li>
-        <li>Flag pole</li>
-        <li>First aid kit</li>
-        <li>Fire blanket</li>
+        <li>American and Liberty flags on an extendable pole</li>
+        <li>Fire ring, fire extinguisher, emergency radio</li>
+        <li>You bring the tent</li>
       </ul>
-      <p class="muted">Camp Hosts may offer their own optional extras.</p>
+      <p class="muted">No electric, water, restrooms, or cabins.</p>
     </div>
   </div>
 </section>
@@ -63,61 +64,56 @@
 
 <section class="section tight">
   <div class="wrap">
-    <p class="eyebrow">Sample sites <span class="tbd">Fake. For testing.</span></p>
-    <div class="sites" id="site-grid" style="margin-top:12px"></div>
-  </div>
-</section>
-
-<section class="section tight" id="cal-section" hidden>
-  <div class="wrap">
-    <div class="cal-wrap">
-      <p class="eyebrow"><span class="test-flag">TEST - no charge</span></p>
-      <h2 id="cal-title">Calendar</h2>
-      <div class="cal-head"><button type="button" id="cal-prev" aria-label="Previous month">&lsaquo;</button><h3 id="cal-month"></h3><button type="button" id="cal-next" aria-label="Next month">&rsaquo;</button></div>
-      <div class="cal-grid" id="cal-grid"></div>
-      <div class="cal-legend"><span><i style="background:#fff"></i>Open</span><span><i style="background:#d3c4ad"></i>Booked (fake)</span><span><i style="background:#9B2C2C"></i>Your dates</span></div>
-      <div class="summary"><span id="cal-sum" aria-live="polite"></span><button class="btn brick" type="button" id="cal-go" disabled>Continue to test checkout</button></div>
+    <!-- ======================================================
+         CALENDLY EMBED SLOT. Calendly is the locked booking tool.
+         Set CALENDLY_URL in assets/js/config.js. While it is
+         empty, this box shows "Booking opens soon".
+         ====================================================== -->
+    <div class="cal-slot" id="calendly-slot" aria-live="polite">
+      <h3>Booking opens soon.</h3>
+      <p class="muted" style="margin:0">Online booking will appear here when it opens. Until then, use the waitlist below.</p>
     </div>
   </div>
 </section>
 
-<section class="section tight" id="checkout-section" hidden>
+<section class="section" id="waitlist">
   <div class="wrap">
-    <p class="eyebrow"><span class="test-flag">TEST - no charge</span></p>
-    <h2>Test checkout</h2>
-    <div class="card" style="margin:12px 0">
-      <ul class="price-board">
-        <li><span>Site</span><b id="ck-site"></b></li>
-        <li><span>Dates</span><b id="ck-dates"></b></li>
-        <li><span>Nights</span><b id="ck-nights"></b></li>
-        <li><span>Included</span><b>Fire ring, flag pole, first aid kit, fire blanket</b></li>
-        <li><span><strong>Total</strong> (flat per site, not per person)</span><b id="ck-total"></b></li>
-      </ul>
-    </div>
-    <form class="form" id="ck-form" action="#" novalidate>
-      <div class="field"><label for="ck-name">Name <span class="req">*</span></label><input id="ck-name" name="name" type="text" autocomplete="name" required maxlength="100"></div>
-      <div class="field"><label for="ck-email">Email <span class="req">*</span></label><input id="ck-email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="150"></div>
-      <div class="field"><label for="ck-phone">Phone <span class="req">*</span></label><input id="ck-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" required pattern="[0-9 .+\(\)\-]{7,20}" maxlength="20"></div>
-      <div class="field"><label for="ck-party">Party size <span class="req">*</span></label>
-        <select id="ck-party" name="party" required><option value="">Choose</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7 or more</option></select>
-        <p class="hint">Group size limit is set by each Camp Host.</p></div>
-      <div class="field full"><label class="check-row"><input type="checkbox" name="rules_ok" required> <span>I will follow the rules my Camp Host posts for the site.</span></label></div>
-      <p class="full fine"><strong>TEST - no charge.</strong> There is no payment step. No card is asked for and nothing is sent.</p>
-      <div class="full btn-row" style="margin-top:0"><button class="btn ghost" type="button" id="ck-back">Back to calendar</button><button class="btn brick" type="submit" id="ck-submit">Place test booking</button></div>
+    <p class="eyebrow">Waitlist and questions</p>
+    <h2>Get on the list.</h2>
+    <p class="lede">Tell us who is coming and when you would like to go. We will reach out when pads open. This does not hold a date.</p>
+    <form class="form" data-lr-form="waitlist" data-confirm="waitlist-done" action="#" method="post" style="margin-top:18px">
+      <div class="field"><label for="w-name">Name <span class="req">*</span></label><input id="w-name" name="name" type="text" autocomplete="name" required maxlength="100"></div>
+      <div class="field"><label for="w-email">Email <span class="req">*</span></label><input id="w-email" name="email" type="email" autocomplete="email" inputmode="email" required maxlength="150"></div>
+      <div class="field"><label for="w-phone">Phone <span class="muted">(optional)</span></label><input id="w-phone" name="phone" type="tel" autocomplete="tel" inputmode="tel" pattern="[0-9 .+\(\)\-]{7,20}" data-pattern-msg="Use digits, spaces, or dashes." maxlength="20"></div>
+      <div class="field"><label for="w-party">Party size <span class="req">*</span></label>
+        <select id="w-party" name="party_size" required><option value="">Choose</option><option>1</option><option>2</option><option>3</option><option>4</option><option>5</option><option>6</option><option>7 or more</option></select>
+        <p class="hint">Occupancy limits are still being set.</p></div>
+      <div class="field"><label for="w-month">Preferred month <span class="req">*</span></label>
+        <select id="w-month" name="preferred_month" required><option value="">Choose</option><option>January</option><option>February</option><option>March</option><option>April</option><option>May</option><option>June</option><option>July</option><option>August</option><option>September</option><option>October</option><option>November</option><option>December</option><option>Flexible</option></select></div>
+      <div class="field full"><label for="w-notes">Notes <span class="muted">(optional)</span></label><textarea id="w-notes" name="notes" maxlength="1500" placeholder="Questions, how many nights, anything we should know."></textarea></div>
+      <div class="field full"><label class="check-row"><input type="checkbox" name="rules_ok" required> <span>I will follow the <a href="#rules">Liberty guest rules</a>.</span></label></div>
+      <div class="full"><button class="btn brick" type="submit" style="width:100%">Join the waitlist</button></div>
     </form>
+    <div class="confirm" id="waitlist-done" hidden>
+      <h3>You are on the list.</h3>
+      <p data-confirm-msg>Thanks. Liberty will reach out when pads open. Nothing is booked yet.</p>
+      <p class="tbd" style="color:#D7CBB8;border-color:#D7CBB8">Draft: no form handler yet, nothing was sent</p>
+    </div>
   </div>
 </section>
 
-<section class="section tight" id="confirm-section" hidden>
+<section class="section dark" id="rules">
   <div class="wrap">
-    <div class="confirm" style="display:block">
-      <p class="eyebrow" style="color:#E9B8B8">TEST BOOKING. NOT REAL. NO CHARGE.</p>
-      <h2>You're booked. (Test)</h2>
-      <h3 id="cf-num"></h3>
-      <ul class="price-board" id="cf-list"></ul>
-      <p style="margin-top:12px">This was saved only in this browser so the dates now show as booked on that calendar. Your Camp Host would send rules and directions before arrival.</p>
-      <p><button class="btn light" type="button" id="cf-again">Try another site</button></p>
-    </div>
+    <p class="eyebrow">Liberty rules</p>
+    <h2>Guest Rules</h2>
+    <ol class="rules" style="margin-top:20px">
+      <li><strong>Quiet hours 9pm to 8am.</strong></li>
+      <li><strong>No generators, Bluetooth speakers or drones.</strong></li>
+      <li><strong>Fire stays in the ring.</strong></li>
+      <li><strong>Pack it out.</strong> Leave nothing behind.</li>
+      <li><strong>Flags stay up.</strong></li>
+      <li><strong>Breaking the quiet or fire rules ends the stay.</strong></li>
+    </ol>
   </div>
 </section>
 
@@ -125,12 +121,11 @@
   <div class="wrap">
     <h3>Fine print</h3>
     <ul class="fine">
-      <li><strong>This is a test booking flow.</strong> The sites, blocked dates and booking numbers are fake. No payment is taken.</li>
-      <li>$80 is a flat price per site per night, not per person. Group size is set by each Camp Host.</li>
-      <li>Each site has its own rules, set and posted by its Camp Host. Your Camp Host sends them before you arrive and enforces them during the stay.</li>
-      <li>Pets, check-in and check-out times, season, and cancellation terms are still being set.</li>
+      <li><strong>No booking is confirmed until Liberty contacts you directly.</strong> Joining the waitlist does not hold a date or a pad.</li>
+      <li>Availability depends on each site being ready and on local rules where the land sits. Some sites may open later than others, or not at all.</li>
+      <li>The exact location of a pad is shared only after a booking is confirmed.</li>
+      <li>Group size is TBD. Pets, occupancy, check-in and check-out times, season, and cancellation terms are still being set.</li>
     </ul>
-    <p style="margin-top:12px"><a href="booking-sample.html">See the sample booking LR-SAMPLE-0001</a> &nbsp; <button class="btn ghost" type="button" id="reset-tests" style="min-height:40px;padding:6px 12px;font-size:.85rem">Clear my test bookings</button></p>
   </div>
 </section>
 </main>
@@ -148,7 +143,7 @@
         <ul>
           <li><a href="book.html">Book</a></li>
           <li><a href="gear.html">Gear Up</a></li>
-          <li><a href="index.html#rules">Camp Host rules</a></li>
+          <li><a href="index.html#rules">Guest rules</a></li>
           <li><a href="hosts.html">Landowners</a></li>
         </ul>
       </div>
@@ -163,6 +158,5 @@
   </div>
 </footer>
 <script src="assets/js/site.js"></script>
-<script src="assets/js/booking.js"></script>
 </body>
 </html>

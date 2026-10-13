@@ -8,17 +8,18 @@ window.LIBERTY = {
      Merch, kit, and host items never show prices. */
   SHOW_PRICES: true,
   PRICES: {
-    night: 80       /* flat, per SITE per night. Not per person. */
+    night: 80,      /* per pad, per night */
+    fireRing: 20,   /* smokeless fire ring add-on */
+    lantern: 15     /* lantern add-on */
   },
-  /* Included in the base price at every site: fire ring, flag pole,
-     first aid kit, fire blanket. Group size is set by each Camp Host.
-     Camp Hosts may offer their own optional extras. */
+  /* Pad standard: American and Liberty flags on an extendable pole,
+     fire ring, fire extinguisher, emergency radio. Group size TBD. */
 
   /* GEAR UP (camper store). Amazon affiliate for now.
-     TODO: paste Randall's Amazon Associates tag here, e.g. "liberty-20".
+     Paste Randall's Amazon Associates tag here, e.g. "liberty-20".
      Each product in assets/js/gear-shop.js has mode 'affiliate' or 'own'.
      Switch an item to 'own' later to sell and ship it yourself. */
-  AFFILIATE_TAG: "TODO-affiliate-tag",
+  AFFILIATE_TAG: "",  /* empty until Randall has a real Amazon Associates tag */
 
   /* BOOKING. Calendly is the locked booking tool.
      No link exists yet. Paste the Calendly scheduling URL
