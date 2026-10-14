@@ -20,3 +20,11 @@ Not published. Do not upload until Randall signs off. Every page has `noindex`.
 - play/ is a local copy of the Trail Runner game. The home page loads it only when tapped.
 - Fonts: Zilla Slab (SIL OFL), bundled in assets/fonts. No outside requests.
 - Product art is placeholder SVG.
+
+## Photo credits (v7)
+Self-hosted in assets/img/photos, compressed under 300 KB. Stock samples, not Liberty sites.
+- hero-forest-camp, site-primitive, campfire, tent-sunset: Unsplash (Unsplash License), photo IDs 1487730116645-74489c95b41b, 1504280390367-361c6d9f38f4, 1478131143081-80f7f84ca84d, 1510312305653-8ed496efae75
+- site-glamping: Li Yang on Unsplash (photo-1632367294096-4e77d53c4ae9)
+- site-cabin: Gabriele Merlino on Unsplash (photo-1733643313174-c0085209f3a6)
+- site-waterfront: Unsplash, "Fall in Lac La Belle" (photo-1634006372581-f66e57880f82)
+- flag: Andrew Patrick Photo on Pexels (photo 12514745, Pexels License)

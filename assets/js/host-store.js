@@ -14,17 +14,14 @@
     { id: "signs", name: "Camping signage", cat: "Site", note: "Site, trail and rules signs." },
     { id: "lights", name: "Solar security path lights", cat: "Site", note: "Solar lights for paths." }
   ];
-  var ICON = {
-    Fire: '<ellipse cx="200" cy="210" rx="90" ry="24" fill="#555" stroke="#1F1A14" stroke-width="4"/><path d="M180 205 q20 -90 40 0z" fill="#F6A04D"/><path d="M192 205 q8 -45 16 0z" fill="#F6D9A0"/>',
-    "Safety gear": '<rect x="130" y="100" width="140" height="110" rx="10" fill="#9B2C2C"/><rect x="190" y="120" width="20" height="70" fill="#F3ECE1"/><rect x="165" y="145" width="70" height="20" fill="#F3ECE1"/>',
-    Site: '<rect x="196" y="60" width="8" height="180" fill="#6B5E4E"/><rect x="140" y="90" width="120" height="60" fill="#1E2D4A"/><text x="200" y="128" fill="#F3ECE1" text-anchor="middle" style="font:700 20px Georgia,serif">LIBERTY</text><circle cx="110" cy="230" r="10" fill="#F6D9A0"/><circle cx="290" cy="230" r="10" fill="#F6D9A0"/>'
-  };
+  var ICON = { "ring-std": "ring", "ring-smk": "fire", firstaid: "firstaid", blanket: "blanket", extinguisher: "extinguisher", wood: "wood", pole: "pole", signs: "sign", lights: "light" };
+
   var cart = {};
   function $(s) { return document.querySelector(s); }
   var grid = $("#store-grid");
   if (!grid) return;
   grid.innerHTML = ITEMS.map(function (p) {
-    return '<article class="product"><div class="art"><svg viewBox="0 0 400 300" role="img" aria-label="' + p.name + ' (placeholder art)"><rect width="400" height="300" fill="#EAE0D0"/><rect y="240" width="400" height="60" fill="#6B5E4E" opacity=".35"/>' + ICON[p.cat] + '</svg></div><div class="body"><span class="tag">' + p.cat + '</span> <span class="tbd">Price $TBD</span><h3 style="margin-top:6px">' + p.name + '</h3><p>' + p.note + '</p><button class="btn brick" type="button" data-add="' + p.id + '">Add to cart</button></div></article>';
+    return '<article class="product"><div class="art">' + window.LR_ICON(ICON[p.id], p.name + ' (placeholder icon)') + '</div><div class="body"><span class="tag">' + p.cat + '</span> <span class="tbd">Price $TBD</span><h3 style="margin-top:6px">' + p.name + '</h3><p>' + p.note + '</p><button class="btn brick" type="button" data-add="' + p.id + '">Add to cart</button></div></article>';
   }).join("");
   function byId(id) { return ITEMS.filter(function (i) { return i.id === id; })[0]; }
   function count() { var n = 0; for (var k in cart) n += cart[k]; return n; }

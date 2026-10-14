@@ -7,12 +7,12 @@
 <meta name="description" content="Sample booking for Liberty Retreats. Test only.">
 <!-- PRIVATE DRAFT: keep out of search engines until Randall okays launch -->
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#1E2D4A">
+<meta name="theme-color" content="#121C30">
 <meta name="format-detection" content="telephone=no">
 <link rel="icon" type="image/svg+xml" href="assets/img/badge.svg">
 <link rel="apple-touch-icon" href="assets/img/badge.svg">
-<link rel="stylesheet" href="assets/css/site.css">
-<script src="assets/js/config.js"></script>
+<link rel="stylesheet" href="assets/css/site.css?v=7">
+<script src="assets/js/config.js?v=7"></script>
 </head>
 <body data-page="book">
 <a class="skip" href="#main">Skip to content</a>
@@ -24,7 +24,7 @@
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav id="site-nav" aria-label="Main">
-      <a href="index.html">Home</a><a href="book.html" aria-current="page">Book</a><a href="gear.html">Gear Up</a><a href="hosts.html" class="nav-land">Landowners</a>
+      <a href="index.html">Home</a><a href="book.html" class="nav-cta" aria-current="page">Book a site</a><a href="gear.html">Gear Up</a><a href="hosts.html" class="nav-land">Landowners</a>
     </nav>
   </div>
 </header>
@@ -38,7 +38,7 @@
 
 <section class="section tight price-only" hidden>
   <div class="wrap grid two">
-    <div class="card">
+    <div class="card price-card">
       <p class="eyebrow">Rates</p>
       <h2>One flat price</h2>
       <ul class="price-board">
@@ -49,12 +49,7 @@
     <div class="card">
       <p class="eyebrow">Included at every site</p>
       <h2>In the base price</h2>
-      <ul class="checks">
-        <li>Fire ring</li>
-        <li>Flag pole</li>
-        <li>First aid kit</li>
-        <li>Fire blanket</li>
-      </ul>
+<ul class="icon-row"><li><svg class="line-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><ellipse cx="24" cy="30" rx="17" ry="6"/><path d="M7 30v5c0 3 8 6 17 6s17-3 17-6v-5"/><path d="M24 26c4-4 5-8 2-13-1 3-3 4-4 4 0 3-2 5-1 9"/></svg><span>Fire ring</span></li><li><svg class="line-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M24 44V4"/><circle cx="24" cy="4" r="1.5"/><path d="M24 8h14v10H24"/><path d="M18 44h12"/><path d="M22 20h4M22 30h4"/></svg><span>Flag pole</span></li><li><svg class="line-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="6" y="14" width="36" height="26" rx="2"/><path d="M18 14v-4h12v4"/><path d="M24 21v12M18 27h12"/></svg><span>First aid kit</span></li><li><svg class="line-icon" viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="12" y="6" width="24" height="10" rx="1"/><path d="M14 16v22l10 4 10-4V16"/><path d="M24 22c3 3 3 7 0 9-3-2-3-6 0-9z"/></svg><span>Fire blanket</span></li></ul>
       <p class="muted">Camp Hosts may offer their own optional extras.</p>
     </div>
   </div>
@@ -137,32 +132,39 @@
 <footer class="site-foot">
   <div class="wrap">
     <div class="foot-grid">
-      <div>
-        <div class="foot-brand">
-          <img src="assets/img/badge.svg" alt="" width="58" height="58">
-          <div><b>LIBERTY RETREATS</b>Book Quiet Ohio Dirt.</div>
-        </div>
-        <p style="margin-top:14px">Primitive pads on private Ohio land. You bring the tent. The land stays land.</p>
+      <div class="foot-about">
+        <a class="foot-brand" href="index.html"><img src="assets/img/badge.svg" alt="" width="48" height="48"><span><b>Liberty Retreats</b><small>Book Quiet Ohio Dirt.</small></span></a>
+        <p>Primitive pads on private Ohio land. You bring the tent. The land stays land.</p>
       </div>
       <div>
+        <h4>Explore</h4>
         <ul>
           <li><a href="book.html">Book</a></li>
           <li><a href="gear.html">Gear Up</a></li>
           <li><a href="index.html#rules">Camp Host rules</a></li>
-          <li><a href="hosts.html">Landowners</a></li>
         </ul>
       </div>
       <div>
+        <h4>Landowners</h4>
+        <ul>
+          <li><a href="hosts.html">Landowner entry</a></li>
+          <li><a href="host-gear.html">Host Gear</a></li>
+          <li><a href="host-store.html">Host Store</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
         <ul>
           <li>X: <a data-x-link href="https://x.com/libertyretreats" target="_blank" rel="noopener">@libertyretreats</a></li>
           <li>Email: <span data-contact-email>Email coming soon</span> <span class="tbd">Placeholder</span></li>
         </ul>
       </div>
     </div>
-    <p class="foot-legal">&copy; <span data-year>2026</span> Liberty Retreats. Private draft. Not published.</p>
+    <div class="foot-legal"><span>&copy; <span data-year>2026</span> Liberty Retreats. Private draft. Not published.</span><span>Photos: Unsplash and Pexels, free license. Sample imagery, not Liberty sites.</span></div>
   </div>
 </footer>
-<script src="assets/js/site.js"></script>
-<script src="assets/js/booking.js"></script>
+<script src="assets/js/icons.js?v=7"></script>
+<script src="assets/js/site.js?v=7"></script>
+<script src="assets/js/booking.js?v=7"></script>
 </body>
 </html>

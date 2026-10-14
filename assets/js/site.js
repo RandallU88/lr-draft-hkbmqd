@@ -10,9 +10,14 @@
   if (C.SHOW_DRAFT_BANNER) {
     var strip = document.createElement("div");
     strip.className = "draft-strip";
-    strip.textContent = "Private draft. Not published. Details may change.";
+    strip.textContent = "Private draft. Not published.";
     document.body.insertBefore(strip, document.body.firstChild);
   }
+
+  /* Header turns solid after scrolling */
+  var head = document.querySelector(".site-head");
+  function onScroll() { if (head) head.classList.toggle("solid", window.scrollY > 24); }
+  window.addEventListener("scroll", onScroll, { passive: true }); onScroll();
 
   /* Mobile nav */
   var toggle = $(".nav-toggle");

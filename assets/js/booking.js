@@ -17,12 +17,8 @@
       desc: "A pad near the water. Water rules set and posted by the Camp Host.",
       blocked: [3, 4, 11, 18, 19, 27, 28] }
   ];
-  var ART = {
-    primitive: '<rect width="400" height="300" fill="#1E2D4A"/><circle cx="320" cy="60" r="22" fill="#F3ECE1"/><polygon points="40,240 80,150 120,240" fill="#2f4a2f"/><polygon points="300,240 345,140 390,240" fill="#2f4a2f"/><polygon points="140,240 200,150 260,240" fill="#6B5E4E" stroke="#1F1A14" stroke-width="4"/><rect y="240" width="400" height="60" fill="#3d3326"/><line x1="290" y1="110" x2="290" y2="240" stroke="#ccc" stroke-width="4"/><rect x="292" y="112" width="40" height="24" fill="#9B2C2C"/><ellipse cx="90" cy="255" rx="26" ry="8" fill="#555"/><path d="M84 252 q6 -22 12 0z" fill="#F6A04D"/>',
-    glamping: '<rect width="400" height="300" fill="#7fa7c9"/><rect y="230" width="400" height="70" fill="#5b7a3a"/><polygon points="90,230 200,100 310,230" fill="#F3ECE1" stroke="#6B5E4E" stroke-width="5"/><rect x="170" y="160" width="60" height="70" fill="#6B5E4E"/><path d="M110 120 h180" stroke="#F6D9A0" stroke-width="3" stroke-dasharray="4 10"/><circle cx="60" cy="60" r="24" fill="#F6D9A0"/>',
-    cabin: '<rect width="400" height="300" fill="#c9b79c"/><rect y="235" width="400" height="65" fill="#5b7a3a"/><rect x="110" y="140" width="180" height="95" fill="#8a5a33" stroke="#1F1A14" stroke-width="4"/><polygon points="95,145 200,75 305,145" fill="#3d3326"/><rect x="185" y="180" width="32" height="55" fill="#3d3326"/><rect x="130" y="165" width="34" height="28" fill="#F6D9A0"/><rect x="236" y="165" width="34" height="28" fill="#F6D9A0"/><rect x="250" y="88" width="16" height="36" fill="#555"/>',
-    waterfront: '<rect width="400" height="300" fill="#f0c9a0"/><circle cx="200" cy="170" r="40" fill="#F6A04D"/><rect y="170" width="400" height="130" fill="#2c5d7c"/><path d="M0 200 q50 -10 100 0 t100 0 t100 0 t100 0" stroke="#7fa7c9" stroke-width="3" fill="none"/><polygon points="20,250 60,180 100,250" fill="#6B5E4E" stroke="#1F1A14" stroke-width="3"/><rect x="0" y="250" width="160" height="50" fill="#3d3326"/>'
-  };
+  /* Site photos: free stock (Unsplash License), self-hosted in assets/img/photos. Samples only. */
+
   function $(s, r) { return (r || document).querySelector(s); }
   function esc(t) { return String(t).replace(/[&<>"']/g, function (c) { return "&#" + c.charCodeAt(0) + ";"; }); }
   function key(d) { return d.getFullYear() + "-" + ("0" + (d.getMonth() + 1)).slice(-2) + "-" + ("0" + d.getDate()).slice(-2); }
@@ -45,7 +41,7 @@
 
   var grid = $("#site-grid");
   grid.innerHTML = SITES.map(function (s) {
-    return '<article class="site-card" id="card-' + s.id + '"><div class="art"><svg viewBox="0 0 400 300" role="img" aria-label="' + s.type + ' site (placeholder illustration)">' + ART[s.id] + '</svg></div><div class="body"><span class="tbd">Fake sample site</span><h3 style="margin-top:8px">' + s.type + '</h3><p>' + esc(s.desc) + '</p><p><strong>$' + RATE + ' per site per night</strong></p><button class="btn brick" type="button" data-pick="' + s.id + '">See calendar</button></div></article>';
+    return '<article class="site-card" id="card-' + s.id + '"><div class="art"><img src="assets/img/photos/site-' + s.id + '.jpg" alt="' + s.type + ' site, stock photo" loading="lazy" width="1000" height="750"></div><div class="body"><span class="tbd">Fake sample site</span><h3 style="margin-top:8px">' + s.type + '</h3><p>' + esc(s.desc) + '</p><p><strong>$' + RATE + ' per site per night</strong></p><button class="btn brick" type="button" data-pick="' + s.id + '">See calendar</button></div></article>';
   }).join("");
 
   var state = { site: null, month: null, ci: null, co: null };

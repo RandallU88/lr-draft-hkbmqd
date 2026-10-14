@@ -7,12 +7,12 @@
 <meta name="description" content="Private landowner information for Liberty Retreats.">
 <!-- PRIVATE DRAFT: keep out of search engines until Randall okays launch -->
 <meta name="robots" content="noindex, nofollow">
-<meta name="theme-color" content="#1E2D4A">
+<meta name="theme-color" content="#121C30">
 <meta name="format-detection" content="telephone=no">
 <link rel="icon" type="image/svg+xml" href="assets/img/badge.svg">
 <link rel="apple-touch-icon" href="assets/img/badge.svg">
-<link rel="stylesheet" href="assets/css/site.css">
-<script src="assets/js/config.js"></script>
+<link rel="stylesheet" href="assets/css/site.css?v=7">
+<script src="assets/js/config.js?v=7"></script>
 </head>
 <body data-page="hosts">
 <a class="skip" href="#main">Skip to content</a>
@@ -24,7 +24,7 @@
     </a>
     <button class="nav-toggle" type="button" aria-expanded="false" aria-controls="site-nav">Menu</button>
     <nav id="site-nav" aria-label="Main">
-      <a href="index.html">Home</a><a href="book.html">Book</a><a href="gear.html">Gear Up</a><a href="hosts.html" aria-current="page" class="nav-land">Landowners</a><a href="host-gear.html" class="host-only-nav" hidden>Host Gear</a><a href="host-store.html" class="host-only-nav" hidden>Host Store</a>
+      <a href="index.html">Home</a><a href="book.html" class="nav-cta">Book a site</a><a href="gear.html">Gear Up</a><a href="hosts.html" aria-current="page" class="nav-land">Landowners</a><a href="host-gear.html" class="host-only-nav" hidden>Host Gear</a><a href="host-store.html" class="host-only-nav" hidden>Host Store</a>
     </nav>
   </div>
 </header>
@@ -45,7 +45,7 @@
   </div>
 </section>
 <div data-gated hidden>
-<div class="host-bar"><div class="wrap"><span>Camp Hosts / Landowners area. Private draft.</span><span><a href="hosts.html" style="color:#F3ECE1">Landowner info</a> &nbsp;|&nbsp; <a href="host-gear.html" style="color:#F3ECE1">Host Gear</a> &nbsp;|&nbsp; <a href="host-store.html" style="color:#F3ECE1">Host Store</a> &nbsp; <button type="button" id="host-lock">Lock</button></span></div></div>
+<div class="host-bar"><div class="wrap"><span class="host-bar-label">Camp Host area</span><span class="host-bar-links"><a href="hosts.html" style="color:#F3ECE1">Landowner info</a> <a href="host-gear.html" style="color:#F3ECE1">Host Gear</a> <a href="host-store.html" style="color:#F3ECE1">Host Store</a><button type="button" id="host-lock">Lock</button></span></div></div>
 <section class="page-head"><div class="wrap">
   <p class="eyebrow" style="color:#E9B8B8">For Camp Hosts / Landowners</p>
   <h1>Quiet paid camping, without turning your land into a park.</h1>
@@ -216,31 +216,38 @@
 <footer class="site-foot">
   <div class="wrap">
     <div class="foot-grid">
-      <div>
-        <div class="foot-brand">
-          <img src="assets/img/badge.svg" alt="" width="58" height="58">
-          <div><b>LIBERTY RETREATS</b>Book Quiet Ohio Dirt.</div>
-        </div>
-        <p style="margin-top:14px">Primitive pads on private Ohio land. You bring the tent. The land stays land.</p>
+      <div class="foot-about">
+        <a class="foot-brand" href="index.html"><img src="assets/img/badge.svg" alt="" width="48" height="48"><span><b>Liberty Retreats</b><small>Book Quiet Ohio Dirt.</small></span></a>
+        <p>Primitive pads on private Ohio land. You bring the tent. The land stays land.</p>
       </div>
       <div>
+        <h4>Explore</h4>
         <ul>
           <li><a href="book.html">Book</a></li>
           <li><a href="gear.html">Gear Up</a></li>
           <li><a href="index.html#rules">Camp Host rules</a></li>
-          <li><a href="hosts.html">Landowners</a></li>
         </ul>
       </div>
       <div>
+        <h4>Landowners</h4>
+        <ul>
+          <li><a href="hosts.html">Landowner entry</a></li>
+          <li><a href="host-gear.html">Host Gear</a></li>
+          <li><a href="host-store.html">Host Store</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
         <ul>
           <li>X: <a data-x-link href="https://x.com/libertyretreats" target="_blank" rel="noopener">@libertyretreats</a></li>
           <li>Email: <span data-contact-email>Email coming soon</span> <span class="tbd">Placeholder</span></li>
         </ul>
       </div>
     </div>
-    <p class="foot-legal">&copy; <span data-year>2026</span> Liberty Retreats. Private draft. Not published.</p>
+    <div class="foot-legal"><span>&copy; <span data-year>2026</span> Liberty Retreats. Private draft. Not published.</span><span>Photos: Unsplash and Pexels, free license. Sample imagery, not Liberty sites.</span></div>
   </div>
 </footer>
-<script src="assets/js/site.js"></script>
+<script src="assets/js/icons.js?v=7"></script>
+<script src="assets/js/site.js?v=7"></script>
 </body>
 </html>
